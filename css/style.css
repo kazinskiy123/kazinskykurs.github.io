@@ -1,0 +1,365 @@
+*, *:after, *:before {
+   box-sizing: border-box;
+   padding: 0;
+   margin: 0;
+   transition: .3s ease-in-out;
+   text-shadow: -2px 0px 1px #000;
+   
+/* добавим плавность переходов для всех элементов страницы*/
+}
+
+ul {
+   background: #4c8fd3#bf9ad3;
+   list-style: none;
+}
+a {
+   text-decoration: none;
+   outline: none;
+   color: #000;
+}
+p{
+   font-family: 'Open Sans', arial, sans-serif;
+   font-size: 18px;
+   line-height: 1.4;
+   color: black;
+}
+img {
+   max-width: 100%;
+   object-fit: cover;
+   object-position: center;
+   margin: 4px;
+}
+h1,h2,h3,h4{
+   margin: 20px;
+   font-size: 42px;
+   font-family: Roboto Slab;
+   font-style: normal;
+   font-weight: normal;
+   line-height: 36px;
+   align-items: center;
+   text-align: center;
+   letter-spacing: 0.2em;
+   color: #fff;  
+}
+
+
+.gallary > img{
+   width: 390px;
+   height: 280px;
+   margin: 0;
+   width: 100%;
+   object-fit: cover;
+   object-position: center;
+   max-width: 600px;
+}
+body{
+   margin: 0;  
+   width: 100%;
+   margin: 0;
+   padding: 0;
+   color: #FFFFFF;
+   font-size: 24px;
+   background: #bdc3c7;  /* fallback for old browsers */
+   background: -webkit-linear-gradient(to right, #2c3e50, #bdc3c7);  /* Chrome 10-25, Safari 5.1-6 */
+   background: linear-gradient(to right, #2c3e50, #bdc3c7); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+}
+.buttonup {
+   width:88px; 
+   height:118px;
+   position:fixed;
+   bottom:20px;
+   right:50px;
+}
+
+/* добавим очистку потока для всех контейнеров, внутри которых задано обтекание дочерних элементов */
+
+header:after, .container:after, footer:after, .widget-posts-list li:after, #subscribe:after {
+   content: "";
+   display: table;
+   clear: both;
+
+}
+
+/* стилевой класс, который управляет шириной контейнера сетки*/
+
+.container {
+   margin: 0 auto;
+   width: 100%;
+   max-width: 1366px;
+   height: 300px;
+   padding: 0 15px;
+}
+
+header {
+   width: 100%;
+   background: #654ea3;  /* fallback for old browsers */
+   background: -webkit-linear-gradient(to right, #eaafc8, #654ea3);  /* Chrome 10-25, Safari 5.1-6 */
+   background: linear-gradient(to right, #eaafc8, #654ea3); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+   box-shadow: 3px 3px 1px rgba(0, 0, 0, .05);
+   padding: 0;
+   position: relative;
+   border-bottom-color:red;
+}
+
+/* логотип */
+
+.logo {
+   position: relative right;
+  width: 250px;
+  height: 250px;
+   flex-direction: column;
+}
+
+/* меню */
+
+#menu li {
+   display: inline-block;
+   margin-right: 28px;
+}
+
+#menu a {
+   color: #fff;
+   text-transform: uppercase;
+   letter-spacing: 1px;
+   font-weight: 600;
+   display: block;
+   line-height: 40px;
+}
+
+#menu a:hover {
+   color: #bcbc73;
+}
+
+#menu li:last-child {
+   margin-right: 0;
+}
+
+.nav-toggle {
+   display: none;
+   position: relative;
+   float: right;
+   width: 40px;
+   height: 40px;
+   margin-left: 20px;
+   margin-right: 20px;
+   background: #4c8fd3;
+   cursor: pointer;
+   box-shadow: 1px 1px 1px #000;
+}
+
+.nav-toggle span {
+   display: block;
+   position: absolute;
+   top: 19px;
+   left: 8px;
+   right: 8px;
+   height: 2px;
+   background: white;
+}
+
+.nav-toggle span:before, .nav-toggle span:after {
+   content: "";
+   position: absolute;
+   display: block;
+   left: 0;
+   width: 100%;
+   height: 2px;
+   background: white;
+}
+
+.nav-toggle span:before {
+   top: -10px;
+}
+
+.nav-toggle span:after {
+   bottom: -10px;
+}
+
+/* класс, который будет добавлен в верхнему меню при нажатии на кнопку и покажет скрытое меню*/
+
+#menu.active {
+   max-height: 123px;
+}
+
+#gallery{
+   margin: auto;
+   margin-top: 20px;
+   min-width: 230px;
+}
+
+.ter{
+   width: 390px;
+   height: 280px;
+   padding: 5px 5px 15px;
+   background: black;
+   border: 1px solid white;
+   border-radius: 20px;
+   box-shadow: 0 0 4px white;
+   position: relative;
+   margin: 0 auto;
+   background-size: cover;
+   display: inline-grid;
+   margin-bottom: 20px;
+}
+
+#we{
+   padding: 15px;
+   font-family: 'Open Sans', arial, sans-serif;
+   font-size: 18px;
+   line-height: 1.5;
+   color: #000000; 
+   margin-bottom: 50px;
+}
+
+#we p{
+   width: 88%;
+   border: 2px solid black;
+   background: white;
+   text-shadow: none;
+}
+#info{
+   position: absolute;
+   max-width: 600px;
+   width:100%;
+   margin: 0 auto;
+   z-index: 1;
+   left: 50%;
+
+}
+
+#info .container {
+   display: flex;
+   column-gap: : 8px 8px;
+   flex-wrap: nowrap;
+   flex-direction: column;
+
+}
+
+.in{
+   background-color: black;
+   border: 2px solid black;
+   color: #fff;
+}
+#info p{
+   
+   margin: auto;
+   width: 87.99999%;
+   margin-top: 0;
+   color: #000000;
+   text-shadow: none;
+}
+
+footer {
+   /*position: relative;*/
+   padding: 0;
+   background:black;
+   color: white;
+}
+footer .container{
+   display: flex;
+   align-items: center;
+}
+.footer-col {
+   width: 33.3333333333%;
+   float: left;
+}
+.footer-col p {
+   color: white;
+}
+.footer-col:last-child {
+   text-align: right;
+}
+   .upbtn {
+    opacity: 0.8;
+    z-index: 9999;
+    width: 60px;
+    height: 60px;
+    position: fixed;
+    bottom: -80px;
+    right: 20px;
+    cursor: pointer;
+    transition: all .7s ease-in-out;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-color: #333333;
+    background-image: url(data:image/svg+xml;utf8;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTYuMC4wLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0+CjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+CjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgdmVyc2lvbj0iMS4xIiBpZD0iQ2FwYV8xIiB4PSIwcHgiIHk9IjBweCIgd2lkdGg9IjMycHgiIGhlaWdodD0iMzJweCIgdmlld0JveD0iMCAwIDQ0NC44MTkgNDQ0LjgxOSIgc3R5bGU9ImVuYWJsZS1iYWNrZ3JvdW5kOm5ldyAwIDAgNDQ0LjgxOSA0NDQuODE5OyIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+CjxnPgoJPHBhdGggZD0iTTQzMy45NjgsMjc4LjY1N0wyNDguMzg3LDkyLjc5Yy03LjQxOS03LjA0NC0xNi4wOC0xMC41NjYtMjUuOTc3LTEwLjU2NmMtMTAuMDg4LDAtMTguNjUyLDMuNTIxLTI1LjY5NywxMC41NjYgICBMMTAuODQ4LDI3OC42NTdDMy42MTUsMjg1Ljg4NywwLDI5NC41NDksMCwzMDQuNjM3YzAsMTAuMjgsMy42MTksMTguODQzLDEwLjg0OCwyNS42OTNsMjEuNDExLDIxLjQxMyAgIGM2Ljg1NCw3LjIzLDE1LjQyLDEwLjg1MiwyNS42OTcsMTAuODUyYzEwLjI3OCwwLDE4Ljg0Mi0zLjYyMSwyNS42OTctMTAuODUyTDIyMi40MSwyMTMuMjcxTDM2MS4xNjgsMzUxLjc0ICAgYzYuODQ4LDcuMjI4LDE1LjQxMywxMC44NTIsMjUuNywxMC44NTJjMTAuMDgyLDAsMTguNzQ3LTMuNjI0LDI1Ljk3NS0xMC44NTJsMjEuNDA5LTIxLjQxMiAgIGM3LjA0My03LjA0MywxMC41NjctMTUuNjA4LDEwLjU2Ny0yNS42OTNDNDQ0LjgxOSwyOTQuNTQ1LDQ0MS4yMDUsMjg1Ljg4NCw0MzMuOTY4LDI3OC42NTd6IiBmaWxsPSIjRkZGRkZGIi8+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPC9zdmc+Cg==)
+}
+.upbtn:hover {
+    opacity: 1;
+    background-color: #7d7e65;
+}
+@media (max-width: 768px) {
+   /* показываем кнопку для переключения верхней навигации */
+   .nav-toggle {
+      display: block;
+   }
+   header {
+      padding: 10px 0;
+   }
+   /* скрываем верхнее меню, отменяем обтекание, позиционируем его, сместив на высоту шапки сайта */
+   #menu {
+      max-height: 0;
+      background: white;
+      float: none;
+      overflow: hidden;
+      top: 236px;
+      right: 0;
+      left: 0;
+      margin: 0;
+      padding: 0;
+      z-index: 3;
+   }
+   /* делаем элементы списка блочными, чтобы они располагались друг под другом */
+   #menu li {
+      display: block;
+      text-align: center;
+      border-bottom: 1px solid #EBEBE3;
+      margin-right: 0;
+   }
+   /* отменяем обтекание левой и правой колонок, устанавливаем им ширину 100%*/
+   .posts-list, aside {
+      width: 100%;
+      float: none;
+   }
+   .widget-post-title {
+      font-size: 1.5em;
+   }
+}
+
+@media (max-width: 480px) {
+   /* отменяем обтекание для логотипа и выравниваем по центру*/
+   .logo {
+      float: none;
+      margin: 0 auto 15px;
+      display: table;
+   }
+   .logo span {
+      margin: 0 2px;
+   }
+   /* позиционируем меню на увеличившуюся высоту шапки */
+   #menu {
+      top: 250px;
+   } 
+   /* убираем верхнюю и нижнюю границы и выравниваем кнопку по центру */
+   .post-footer {
+      border-top: none;
+      border-bottom: none;
+      text-align: center;
+   }
+   .widget-post-title {
+      font-size: 1.2em;
+   }
+   /* отменяем обтекание для столбцов подвала страницы */
+
+   .footer-col {
+      float: none;
+      margin-bottom: 20px;
+      width: 100%;
+      text-align: center;
+   }
+   .footer-col:last-child {
+      text-align: center;
+      margin-bottom: 0;
+   }
+}
