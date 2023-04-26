@@ -1,0 +1,101 @@
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic,700,700italic/Playfair+Display:400,700&subset=latin,cyrillic">
+   <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.css">
+   <link rel="stylesheet" href="css/style.css">
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+   <title>Магазин бытовой техники</title>
+</head>
+<body >
+    <div class="conteiner" align="center">
+    <header>
+     <div class="second"> 
+      <h1 class="foot">Магазин бытовой техники</h1>
+    </div>
+  
+      <div class="logo"><img src="img/logo.png" alt=""></div>
+     <div class="nav-toggle"><span></span></div>
+         <ul id="menu">
+            <li><a href="#we">о нас</a></li>
+            <li><a href="#gallery">галерея</a></li>
+            <li><a href="#yr">контакты</a></li>
+         </ul>
+    </header>
+  
+    <div id="gallery">
+      <h2>Галерея</h2>
+      <img src="img/1.webp" alt="" class="ter">
+      <img src="img/2.webp" alt="" class="ter">
+      <img src="img/3.webp" alt="" class="ter">
+      <img src="img/4.webp" alt="" class="ter">
+      <img src="img/5.webp" alt="" class="ter">
+      <img src="img/6.webp" alt="" class="ter">
+      <img src="img/7.webp" alt="" class="ter">
+      <img src="img/8.webp" alt="" class="ter">
+      <img src="img/9.webp" alt="" class="ter">
+      <img src="img/10.webp" alt="" class="ter">
+    </div>    
+  
+    <div id="we" align="center">
+      <h3>"О нас"</h3>
+      <p>
+Доброжелательная атмосфера в коллективе отражается и на клиентах, они никогда не уходят без покупки, тем более что и цена товара доступная. Так же присутствует большое количество разнообразных акций, что ведет к увеличению продаж бытовой техники в магазинах данной сети. Существует возможность приобретения товаров в кредит, возможность рассрочки, приобретения подарочных сертификатов, а также возможность накопления бонусов, которые потом можно обменять на товары.
+Качество наших товаров и высокий уровень обслуживания позволяют нам не пользоваться запрещенными приемами. Бизнес для нас не просто работа. Нам доставляет удовольствие общаться с нашими покупателями и предлагать им только качественную бытовую технику. Мы стремимся к лучшим результатам во всем, что мы делаем.
+Доступность. Мы отбираем только надежные модели и устанавливаем реальные цены. То есть у нас вы покупаете технику и платите столько, сколько она стоит. Мы стремимся к тому, чтобы каждый человек мог приобрести любую бытовую технику. Для этого предлагается возможность покупки в кредит.
+   </p>
+    </div>
+
+    <div id="info">
+      <h4> Контакты</h4>
+    <div class="container">
+       <div class="in">Адрес:
+442280, Россия, Пензенская область, Белинский район, село Лермонтово, улица Бугор 1/1 </div>
+       <div class="in">Для гарантийных писем:
+tarhany.zakaz@yandex.ru
+Электронная почта:
+mustarhany@mail.ru</div>
+       <div class="in">Телефоны для справок:
+8(937)4035031
+8(927)0943653</div>
+    </div>
+
+</div>
+<footer id="yr">
+      <div class="container">
+         <div class="footer-col">© 2022</div>
+      </div>
+   </footer>
+
+<script src="js/script.js"></script>
+      <script>
+      $('.nav-toggle').on('click', function () {
+         $('#menu').toggleClass('active');
+      });
+   </script>
+   <script>
+$('body').append('<div class="upbtn"></div>');            
+$(window).scroll(function() {
+    if ($(this).scrollTop() > 100) {
+        $('.upbtn').css({
+            bottom: '15px'
+        });
+        } else {
+        $('.upbtn').css({
+            bottom: '-80px'
+        });
+    }
+});
+$('.upbtn').on('click',function() {
+    $('html, body').animate({
+        scrollTop: 0
+    }, 500);
+    return false;
+});
+</script>
+</div>
+</body>
+</html>
